@@ -18,9 +18,13 @@ export default function Container({ view, telemetry }) {
   const clear = () => setCommands([]);
 
   return (
-    <main className=" flex flex-col flex-1 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 border-l border-gray-300 shadow-md p-4 h-full">
+    // 🌟 수정 1: h-full 제거, rounded-l-2xl을 추가하여 왼쪽 모서리를 둥글게 처리하고, 하단 여백을 없애기 위해 mb-[10px]를 제거했습니다.
+    <main className="flex flex-col flex-1 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 border-l border-gray-300 shadow-md p-4 rounded-l-2xl">
+      
       {/* 상단 뷰 영역 (입력창 제외하고 전체 차지) */}
-      <div className="flex-1 overflow-hidden mb-[10px]">
+      {/* 🌟 수정 2: flex flex-col을 추가하여 내부 요소가 수직으로 공간을 분배하도록 했습니다. (스크롤 문제 해결) */}
+      <div className="flex flex-col flex-1 overflow-hidden mb-[10px]">
+        
         {/* 제목 + 버튼들 한 줄로 정렬 */}
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-2xl font-semibold capitalize text-gray-800">{view} View</h2>
@@ -46,7 +50,8 @@ export default function Container({ view, telemetry }) {
         </div>
 
         {/* 메인 뷰 영역 */}
-        <div className="w-full h-full bg-white rounded-md shadow-inner overflow-auto">
+        {/* 🌟 수정 3: h-full 대신 flex-1 적용하여 남은 공간을 채우도록 했습니다. (스크롤 문제 해결) */}
+        <div className="w-full flex-1 bg-white rounded-md shadow-inner overflow-auto">
           {view === 'table' && <Table telemetry={telemetry} />}
           {view === 'chart' && <Chart />}
           {view === 'echo' && <Echo />}
