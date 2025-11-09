@@ -18,7 +18,7 @@ export default function Container({ view, telemetry }) {
   const clear = () => setCommands([]);
 
   return (
-    <main className="flex flex-col flex-1 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 border-l border-gray-300 shadow-md p-4 h-full">
+    <main className=" flex flex-col flex-1 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 border-l border-gray-300 shadow-md p-4 h-full">
       {/* 상단 뷰 영역 (입력창 제외하고 전체 차지) */}
       <div className="flex-1 overflow-hidden mb-[10px]">
         {/* 제목 + 버튼들 한 줄로 정렬 */}

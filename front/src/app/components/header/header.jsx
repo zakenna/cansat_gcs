@@ -1,6 +1,6 @@
 'use client';
 
-export default function Header({ connected }) {
+export default function Header() {
   return (
     <header className="w-full h-24 gap-[10px] bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg text-gray-100 flex items-center justify-between px-10 border-b border-gray-700 relative">
       {/* 왼쪽 로고 + 텍스트 */}
@@ -22,13 +22,6 @@ export default function Header({ connected }) {
           CanSat Ground Control System
         </h1>
       </div>
-
-      {/* 연결 상태 표시 */}
-      {connected !== null && (
-        <p className={`font-semibold text-lg ${connected ? 'text-green-500' : 'text-red-500'}`}>
-          {connected ? 'Connected ✅' : 'Not Connected ❌'}
-        </p>
-      )}
     </header>
   );
 }
