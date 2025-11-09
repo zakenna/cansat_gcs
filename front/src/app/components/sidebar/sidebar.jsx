@@ -74,7 +74,7 @@ export default function Sidebar({ setView, setTelemetry, setConnected }) {
   };
 
   return (
-    <aside className="w-72 h-full bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 border-r border-gray-300 shadow-md p-4 flex flex-col justify-between rounded-r-2xl text-sm">
+    <aside className="w-72 h-full mb-[10px] bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 border-r border-gray-300 shadow-md p-4 flex flex-col justify-between rounded-r-2xl text-sm">
 
       {/* ✅ Control Panel */}
       <section className="space-y-3">

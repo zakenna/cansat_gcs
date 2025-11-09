@@ -29,17 +29,14 @@ export default function DashboardContainer() {
     return () => clearInterval(intervalId); 
   }, []);
   
-  // front/src/app/dashboardContainer.jsx
-
-// ... (생략)
   return (
     <div className="flex flex-col h-screen w-screen overflow-hidden">
       {/* ✅ 상단 Header */}
-      <Header connected={connected} currentTime={currentTime} />
+      {/* 👈 currentTime prop 전달 */}
+      <Header connected={connected} currentTime={currentTime} /> 
 
       {/* ✅ Sidebar + Container */}
-      {/* 🌟 수정 1: h-[calc(100vh-10rem)] 속성 제거. flex-1만 사용하여 남은 공간을 정확히 채웁니다. */}
-      <div className="flex flex-1 w-full"> 
+      <div className="flex flex-1 w-full h-[calc(100vh-10rem)]"> {/* Header 높이 반영 */}
         <Sidebar
           setView={setView}
           setTelemetry={setTelemetry}
