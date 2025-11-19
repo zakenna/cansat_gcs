@@ -9,11 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "leaflet": "^1.9.4",
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0",
+=======
+    "next": "15.1.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+>>>>>>> 78537e58daccafec07ad5ae652a9a5412b7e41bf
     "recharts": "^3.3.0"
   },
   "devDependencies": {
